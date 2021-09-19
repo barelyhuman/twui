@@ -1,0 +1,63 @@
+{
+  "name": "twui",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.js",
+  "author": "Siddharth <ahoy@barelyhuman.dev>",
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev:wrap": "wrap -w",
+    "dev:playground": "cd example; npm run start",
+    "dev:stone": "stone-cli",
+    "dev": "concurrently 'npm run dev:wrap' 'npm run dev:stone' 'npm run dev:playground'",
+    "build": "wrap",
+    "postbuild": "npm run copy",
+    "copy": "shx mkdir -p dist/css; shx cp src/styles/*.css dist/css/",
+    "fix": "wrap -f"
+  },
+  "dependencies": {
+    "@barelyhuman/stone": "^0.0.4",
+    "@barelyhuman/stone-cli": "^0.0.3",
+    "@barelyhuman/wrap": "^0.0.7",
+    "clsx": "^1.1.1"
+  },
+  "wrap": {
+    "external": [
+      "react"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "concurrently": "^6.2.1",
+    "react": "^16.8",
+    "react-dom": "^16.8",
+    "react-scripts": "^4.0.3",
+    "rollup": "^2.56.3",
+    "shx": "^0.3.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8",
+    "react-dom": "^16.8"
+  },
+  "repository": "git@github.com:barelyhuman/twui.git"
+}
