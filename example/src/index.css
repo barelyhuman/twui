@@ -21,3 +21,11 @@ pre > code {
   padding: 8px;
   border-radius: 8px;
 }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.m-1 {
+  margin: 4px;
+}

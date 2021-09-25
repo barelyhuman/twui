@@ -37,6 +37,12 @@
       "react"
     ]
   },
+  "standard": {
+    "ignore": [
+      "node_modules",
+      "build"
+    ]
+  },
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -53,7 +59,8 @@
     "react-dom": "^16.8",
     "react-scripts": "^4.0.3",
     "rollup": "^2.56.3",
-    "shx": "^0.3.3"
+    "shx": "^0.3.3",
+    "standard": "^16.0.3"
   },
   "peerDependencies": {
     "react": "^16.8",

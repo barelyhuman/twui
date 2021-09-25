@@ -1,13 +1,12 @@
-import React from "react";
-import { colors, css } from "../config/theme.config";
-import cn from "clsx";
+import React from 'react'
+import { colors, css } from '../config/theme.config'
+import cn from 'clsx'
 
 const loaderColors = {
-  default: colors.global.black,
-  primary: colors.global.blue4,
-  secondary: colors.global.gray5,
-  danger: colors.global.red4,
-};
+  default: colors.alias.default.darker(10).value(),
+  primary: colors.alias.primary.value(),
+  danger: colors.alias.danger.lighter(5).value()
+}
 
 const loader = css`
   display: inline-block;
@@ -20,22 +19,18 @@ const loader = css`
   animation: loader 400ms linear infinite;
 
   // Default colors
-  border-top-color: ${loaderColors.default.value()};
-  border-left-color: ${loaderColors.default.value()};
+  border-top-color: ${loaderColors.default};
+  border-left-color: ${loaderColors.default};
   border-bottom-color: #efefef;
   border-right-color: #efefef;
 
   &.primary {
-    border-top-color: ${loaderColors.primary.value()};
-    border-left-color: ${loaderColors.primary.value()};
-  }
-  &.secondary {
-    border-top-color: ${loaderColors.secondary.value()};
-    border-left-color: ${loaderColors.secondary.value()};
+    border-top-color: ${loaderColors.primary};
+    border-left-color: ${loaderColors.primary};
   }
   &.danger {
-    border-top-color: ${loaderColors.danger.value()};
-    border-left-color: ${loaderColors.danger.value()};
+    border-top-color: ${loaderColors.danger};
+    border-left-color: ${loaderColors.danger};
   }
 
   @-webkit-keyframes loader {
@@ -54,9 +49,9 @@ const loader = css`
       transform: rotate(360deg);
     }
   }
-`;
+`
 
-export const Loader = ({ primary, secondary, danger, ...props }) => {
-  const classList = cn(loader, { primary, secondary, danger });
-  return <div className={classList}></div>;
-};
+export const Loader = ({ primary, danger, ...props }) => {
+  const classList = cn(loader, { primary, danger })
+  return <div className={classList} />
+}

@@ -10,6 +10,9 @@ export const InputScene = () => {
         <Spacer x={1} inline />
         <Input danger placeholder="Placeholder" />
         <Spacer x={1} inline />
+        <Input type="password" placeholder="Password" />
+        <Spacer x={1} inline />
+        <Input success type="password" placeholder="Password" />
       </Padding>
       <Padding all={1}>
         <pre>
@@ -19,8 +22,13 @@ export const InputScene = () => {
 function Inputs() {
   return (
     <>
-      <Input placeholder="Placeholder" />
-      <Input danger placeholder="Placeholder" />
+      <Input placeholder='Placeholder' />
+      
+      <Input type='password' placeholder='Password' />
+
+      <Input danger placeholder='Placeholder' />
+
+      <Input success type='password' placeholder='Password' />
     </>
   );
 }`}

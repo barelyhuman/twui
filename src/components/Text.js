@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const Text = ({
   children,
@@ -16,14 +16,14 @@ export const Text = ({
     <SelectedTag tagTypes={{ h1, h2, h3, h4, h5, h6, p, label }}>
       {children}
     </SelectedTag>
-  );
-};
+  )
+}
 
 const SelectedTag = ({ tagTypes, children, ...props }) => {
-  let ActiveTag = Object.entries(tagTypes).find((tag) => tag[1]);
+  let ActiveTag = Object.entries(tagTypes).find((tag) => tag[1])
   if (!ActiveTag) {
-    return <p>{children}</p>;
+    return <p>{children}</p>
   }
-  ActiveTag = ActiveTag[0];
-  return <ActiveTag>{children}</ActiveTag>;
-};
+  ActiveTag = ActiveTag[0]
+  return <ActiveTag>{children}</ActiveTag>
+}
