@@ -1,55 +1,53 @@
-import React from 'react'
-import cn from 'clsx'
-import { css, alias } from '../config/theme.config'
+import React from 'react';
+import cn from 'clsx';
+import { css, alias } from '../config/theme.config';
 
 const buttonColors = {
   defaultBorderColor: 'transparent',
-  defaultFG: alias.default.value(),
+  defaultFG: alias.default.darker(15).value(),
   defaultBG: alias.default.lighter(25).value(),
-  defaultBorderHoverColor: 'transparent',
-  defaultHoverFG: alias.default.value(),
-  defaultHoverBG: alias.default.lighter(20).value(),
+  defaultBorderHoverColor: alias.default.lighter(25).value(),
+  defaultHoverFG: alias.default.darker(15).value(),
+  defaultHoverBG: alias.default.lighter(25).value(),
 
   primaryBorderColor: 'transparent',
-  primaryFG: alias.primary.value(),
+  primaryFG: alias.primary.darker(15).value(),
   primaryBG: alias.primary.lighter(25).value(),
-  primaryBorderHoverColor: 'transparent',
-  primaryHoverFG: alias.primary.value(),
-  primaryHoverBG: alias.primary.lighter(20).value(),
+  primaryBorderHoverColor: alias.primary.lighter(25).value(),
+  primaryHoverFG: alias.primary.darker(15).value(),
+  primaryHoverBG: alias.primary.lighter(25).value(),
 
   dangerBorderColor: 'transparent',
-  dangerFG: alias.danger.value(),
+  dangerFG: alias.danger.darker(15).value(),
   dangerBG: alias.danger.lighter(25).value(),
-  dangerBorderHoverColor: 'transparent',
-  dangerHoverFG: alias.danger.value(),
-  dangerHoverBG: alias.danger.lighter(20).value()
-}
+  dangerBorderHoverColor: alias.danger.lighter(25).value(),
+  dangerHoverFG: alias.danger.darker(15).value(),
+  dangerHoverBG: alias.danger.lighter(25).value(),
+};
 
 const buttonStyle = css`
-  background: ${buttonColors.defaultBG};
+  padding: 0 16px;
+
+  font-size: 14px;
+  line-height: 27px;
+
+  background-color: ${buttonColors.defaultBG};
   color: ${buttonColors.defaultFG};
-  border-radius: 6px;
+
   border: 1px solid ${buttonColors.defaultBorderColor};
-  height: 36px;
-  padding: 0 24px;
-  font-weight: bold;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease;
+  border-radius: 4px;
 
   &:hover {
-    outline: #000;
-    cursor: pointer;
     border-color: ${buttonColors.defaultBorderHoverColor};
     color: ${buttonColors.defaultHoverFG};
-    background: ${buttonColors.defaultHoverBG};
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
   }
 
   &.primary {
     background: ${buttonColors.primaryBG};
     color: ${buttonColors.primaryFG};
-    border: 2px solid ${buttonColors.primaryBorderColor};
+    border: 1px solid ${buttonColors.primaryBorderColor};
   }
 
   &.primary:hover {
@@ -61,7 +59,7 @@ const buttonStyle = css`
   &.danger {
     background: ${buttonColors.dangerBG};
     color: ${buttonColors.dangerFG};
-    border: 2px solid ${buttonColors.dangerBorderColor};
+    border: 1px solid ${buttonColors.dangerBorderColor};
   }
 
   &.danger:hover {
@@ -75,13 +73,15 @@ const buttonStyle = css`
   }
 
   &.ghost {
+    border-color: transparent;
     background-color: transparent;
   }
 
   &.ghost:hover {
+    border-color: transparent;
     background-color: transparent;
   }
-`
+`;
 
 export const Button = ({
   className,
@@ -96,8 +96,8 @@ export const Button = ({
     primary,
     pill,
     ghost,
-    danger
-  })
+    danger,
+  });
 
   return (
     <>
@@ -105,5 +105,5 @@ export const Button = ({
         {children}
       </button>
     </>
-  )
-}
+  );
+};

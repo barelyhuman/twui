@@ -1,8 +1,8 @@
 import {
   decorate,
   // CSSWebIOAdaptor,
-  CSSWebInjectAdaptor
-} from '@barelyhuman/stone'
+  CSSWebInjectAdaptor,
+} from '@barelyhuman/stone';
 
 const themeConfig = {
   colors: {
@@ -25,11 +25,11 @@ const themeConfig = {
       yellow9: '#EBCB8B',
 
       // Orange
-      orange9: '#D08770'
-    }
+      orange9: '#D08770',
+    },
   },
-  dimensions: {}
-}
+  dimensions: {},
+};
 
 // const adaptors = {
 //   css: CSSWebIOAdaptor({
@@ -39,26 +39,26 @@ const themeConfig = {
 // };
 
 const adaptors = {
-  css: CSSWebInjectAdaptor
-}
+  css: CSSWebInjectAdaptor,
+};
 
 const createAliasMiddleware = (ctx) => {
   // add custom colors
-  const { colors } = ctx
+  const { colors } = ctx;
   ctx.alias = {
     default: colors.global.black.lighter(50),
     primary: colors.global.blue9,
     secondary: colors.global.black.lighter(50),
     success: colors.global.green9,
     danger: colors.global.red9,
-    disabled: colors.global.white.darker(5)
-  }
-}
+    disabled: colors.global.white.darker(5),
+  };
+};
 
 const { colors, alias, dimensions, css } = decorate(
   themeConfig,
   adaptors,
   createAliasMiddleware
-)
+);
 
-export { dimensions, colors, alias, css }
+export { dimensions, colors, alias, css };
