@@ -1,22 +1,22 @@
-import React from "react";
-import { Spacer, Input, Padding, Text } from "twui";
+import React from 'react'
+import { Spacer, Input, Padding, Text } from 'twui'
 
 export const InputScene = () => {
   return (
     <>
       <Text label>Inputs</Text>
-      <Padding y={2} className="flex">
-        <Input placeholder="Placeholder" />
+      <Padding y={2} className='flex'>
+        <Input placeholder='Placeholder' />
         <Spacer x={1} inline />
-        <Input danger placeholder="Placeholder" />
+        <Input danger placeholder='Placeholder' />
         <Spacer x={1} inline />
-        <Input type="password" placeholder="Password" />
+        <Input type='password' placeholder='Password' />
         <Spacer x={1} inline />
-        <Input success type="password" placeholder="Password" />
+        <Input success type='password' placeholder='Password' />
       </Padding>
       <Padding all={1}>
         <pre>
-          <code className="language-javascript">
+          <code className='language-javascript'>
             {`import { Input } from "twui";
               
 function Inputs() {
@@ -36,5 +36,5 @@ function Inputs() {
         </pre>
       </Padding>
     </>
-  );
-};
+  )
+}

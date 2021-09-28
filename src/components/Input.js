@@ -1,30 +1,30 @@
 import React from 'react'
-import { colors, css } from '../config/theme.config'
+import { colors, css, alias } from '../config/theme.config'
 import cn from 'clsx'
 
 const inputColors = {
-  defaultBorderColor: colors.alias.default.lighter(25).value(),
-  defaultBG: colors.alias.default.lighter(25).value(),
+  defaultBorderColor: alias.default.lighter(25).value(),
+  defaultBG: alias.default.lighter(25).value(),
   defaultFG: colors.global.black.lighter(10).value(),
 
-  defaultBorderHoverColor: colors.alias.default.lighter(20).value(),
-  defaultHoverBG: colors.alias.default.lighter(20).value(),
+  defaultBorderHoverColor: alias.default.lighter(20).value(),
+  defaultHoverBG: alias.default.lighter(20).value(),
   defaultHoverFG: colors.global.black.lighter(10).value(),
 
-  dangerBorderColor: colors.alias.danger.value(),
-  dangerBG: colors.alias.danger.value(),
+  dangerBorderColor: alias.danger.value(),
+  dangerBG: alias.danger.value(),
   dangerFG: colors.global.white.value(),
 
-  dangerBorderHoverColor: colors.alias.danger.value(),
-  dangerHoverBG: colors.alias.danger.value(),
+  dangerBorderHoverColor: alias.danger.value(),
+  dangerHoverBG: alias.danger.value(),
   dangerHoverFG: colors.global.white.value(),
 
-  successBorderColor: colors.alias.success.value(),
-  successBG: colors.alias.success.value(),
+  successBorderColor: alias.success.value(),
+  successBG: alias.success.value(),
   successFG: colors.global.white.value(),
 
-  successBorderHoverColor: colors.alias.success.value(),
-  successHoverBG: colors.alias.success.value(),
+  successBorderHoverColor: alias.success.value(),
+  successHoverBG: alias.success.value(),
   successHoverFG: colors.global.white.value()
 }
 

@@ -27,7 +27,7 @@
     "fix": "wrap -f"
   },
   "dependencies": {
-    "@barelyhuman/stone": "^0.0.4",
+    "@barelyhuman/stone": "^0.0.5",
     "@barelyhuman/stone-cli": "^0.0.3",
     "@barelyhuman/wrap": "^0.0.7",
     "clsx": "^1.1.1"

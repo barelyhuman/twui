@@ -1,28 +1,28 @@
 import React from 'react'
 import cn from 'clsx'
-import { css, colors } from '../config/theme.config'
+import { css, alias } from '../config/theme.config'
 
 const buttonColors = {
   defaultBorderColor: 'transparent',
-  defaultFG: colors.alias.default.value(),
-  defaultBG: colors.alias.default.lighter(25).value(),
+  defaultFG: alias.default.value(),
+  defaultBG: alias.default.lighter(25).value(),
   defaultBorderHoverColor: 'transparent',
-  defaultHoverFG: colors.alias.default.value(),
-  defaultHoverBG: colors.alias.default.lighter(20).value(),
+  defaultHoverFG: alias.default.value(),
+  defaultHoverBG: alias.default.lighter(20).value(),
 
   primaryBorderColor: 'transparent',
-  primaryFG: colors.alias.primary.value(),
-  primaryBG: colors.alias.primary.lighter(25).value(),
+  primaryFG: alias.primary.value(),
+  primaryBG: alias.primary.lighter(25).value(),
   primaryBorderHoverColor: 'transparent',
-  primaryHoverFG: colors.alias.primary.value(),
-  primaryHoverBG: colors.alias.primary.lighter(20).value(),
+  primaryHoverFG: alias.primary.value(),
+  primaryHoverBG: alias.primary.lighter(20).value(),
 
   dangerBorderColor: 'transparent',
-  dangerFG: colors.alias.danger.value(),
-  dangerBG: colors.alias.danger.lighter(25).value(),
+  dangerFG: alias.danger.value(),
+  dangerBG: alias.danger.lighter(25).value(),
   dangerBorderHoverColor: 'transparent',
-  dangerHoverFG: colors.alias.danger.value(),
-  dangerHoverBG: colors.alias.danger.lighter(20).value()
+  dangerHoverFG: alias.danger.value(),
+  dangerHoverBG: alias.danger.lighter(20).value()
 }
 
 const buttonStyle = css`

@@ -1,11 +1,11 @@
-import React from 'react'
-import { colors, css } from '../config/theme.config'
 import cn from 'clsx'
+import React from 'react'
+import { alias, css } from '../config/theme.config'
 
 const loaderColors = {
-  default: colors.alias.default.darker(10).value(),
-  primary: colors.alias.primary.value(),
-  danger: colors.alias.danger.lighter(5).value()
+  default: alias.default.darker(10).value(),
+  primary: alias.primary.value(),
+  danger: alias.danger.lighter(5).value()
 }
 
 const loader = css`

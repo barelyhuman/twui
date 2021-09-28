@@ -1,20 +1,19 @@
-import React from 'react'
-
 import cn from 'clsx'
-import { css, colors } from '../config/theme.config'
+import React from 'react'
+import { alias, css } from '../config/theme.config'
 
 const checkboxColors = {
-  defaultBG: colors.alias.default.lighter(25).value(),
-  defaultFG: colors.alias.default.darker(20).value(),
+  defaultBG: alias.default.lighter(25).value(),
+  defaultFG: alias.default.darker(20).value(),
 
-  primaryBG: colors.alias.primary.lighter(25).value(),
-  primaryFG: colors.alias.primary.darker(20).value(),
+  primaryBG: alias.primary.lighter(25).value(),
+  primaryFG: alias.primary.darker(20).value(),
 
-  successBG: colors.alias.success.lighter(25).value(),
-  successFG: colors.alias.success.darker(20).value(),
+  successBG: alias.success.lighter(25).value(),
+  successFG: alias.success.darker(20).value(),
 
-  dangerBG: colors.alias.danger.lighter(25).value(),
-  dangerFG: colors.alias.danger.darker(20).value()
+  dangerBG: alias.danger.lighter(25).value(),
+  dangerFG: alias.danger.darker(20).value()
 }
 
 const switchContainer = css`
@@ -67,9 +66,9 @@ const switchInput = css`
   }
 
   &:disabled + .${switchControl} {
-    border-color: ${(theme) => theme.colors.alias.disabled.value()};
-    background: ${(theme) => theme.colors.alias.disabled.value()};
-    color: ${(theme) => theme.colors.alias.disabled.value()};
+    border-color: ${(theme) => theme.alias.disabled.value()};
+    background: ${(theme) => theme.alias.disabled.value()};
+    color: ${(theme) => theme.alias.disabled.value()};
     cursor: not-allowed;
   }
 `

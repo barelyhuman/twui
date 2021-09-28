@@ -42,17 +42,23 @@ const adaptors = {
   css: CSSWebInjectAdaptor
 }
 
-const { colors: _colors } = decorate(themeConfig, adaptors)
+const createAliasMiddleware = (ctx) => {
+  // add custom colors
+  const { colors } = ctx
+  ctx.alias = {
+    default: colors.global.black.lighter(50),
+    primary: colors.global.blue9,
+    secondary: colors.global.black.lighter(50),
+    success: colors.global.green9,
+    danger: colors.global.red9,
+    disabled: colors.global.white.darker(5)
+  }
+}
 
-// add custom colors
-themeConfig.colors.alias = {}
-themeConfig.colors.alias.default = _colors.global.black.lighter(50).value()
-themeConfig.colors.alias.primary = _colors.global.blue9.value()
-themeConfig.colors.alias.secondary = _colors.global.black.lighter(50).value()
-themeConfig.colors.alias.success = _colors.global.green9.value()
-themeConfig.colors.alias.danger = _colors.global.red9.value()
-themeConfig.colors.alias.disabled = _colors.global.white.darker(5).value()
+const { colors, alias, dimensions, css } = decorate(
+  themeConfig,
+  adaptors,
+  createAliasMiddleware
+)
 
-const { dimensions, colors, css } = decorate(themeConfig, adaptors)
-
-export { dimensions, colors, css }
+export { dimensions, colors, alias, css }
