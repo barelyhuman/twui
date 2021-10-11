@@ -1,6 +1,6 @@
-import React from 'react';
-import cn from 'clsx';
-import { css, alias } from '../config/theme.config';
+import React from 'react'
+import cn from 'clsx'
+import { css, alias } from '../config/theme.config'
 
 const buttonColors = {
   defaultBorderColor: 'transparent',
@@ -22,8 +22,8 @@ const buttonColors = {
   dangerBG: alias.danger.lighter(25).value(),
   dangerBorderHoverColor: alias.danger.lighter(25).value(),
   dangerHoverFG: alias.danger.darker(15).value(),
-  dangerHoverBG: alias.danger.lighter(25).value(),
-};
+  dangerHoverBG: alias.danger.lighter(25).value()
+}
 
 const buttonStyle = css`
   padding: 0 16px;
@@ -81,7 +81,7 @@ const buttonStyle = css`
     border-color: transparent;
     background-color: transparent;
   }
-`;
+`
 
 export const Button = ({
   className,
@@ -96,8 +96,8 @@ export const Button = ({
     primary,
     pill,
     ghost,
-    danger,
-  });
+    danger
+  })
 
   return (
     <>
@@ -105,5 +105,5 @@ export const Button = ({
         {children}
       </button>
     </>
-  );
-};
+  )
+}
